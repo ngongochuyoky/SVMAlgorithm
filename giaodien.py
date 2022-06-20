@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
-import pickle
+import pickle5 as pickle
 import warnings
 warnings.filterwarnings(action='ignore')
 
