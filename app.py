@@ -15,7 +15,6 @@ import seaborn as sns
 sns.set_style('whitegrid')
 
 
-
 st.sidebar.title("Phân loại động vật với thuật toán SVM")
 st.sidebar.markdown("Hình ảnh của bạn là: ")
 st.sidebar.markdown("✅Mèo 🚫Chó 🍄Cừu")
@@ -79,14 +78,12 @@ df_labels = pd.DataFrame(
     columns=['label']
 )
 
-
 image = Image.open('imagemodels/cfm_sklearn.png')
 image1 = Image.open('imagemodels/Multiclass ROC sklearn.png')
 
 col1, col2 = st.columns(2)
 with col1:
     st.header("Phần trăm dữ liệu")
-
 
     labels_circe =  'Cats','Dogs','Sheeps'
     sizes = [2000,2000,2000]
@@ -106,30 +103,18 @@ with col2:
 def plot_metrics(metrics_list):
     st.set_option('deprecation.showPyplotGlobalUse', False)
 
-
-
     if 'Confusion Matrix' in metrics_list:
 
         st.subheader("Confusion Matrix")
         st.image(image, caption='Ma trận nhầm lẫn với tập test')
 
-
-
-
     if 'ROC Curve' in metrics_list:
         st.subheader("ROC Curve")
         st.image(image1, caption='Đường cong ROC với tập test')
 
-
-
-
-
-
 class_names = ['Not Spam', 'Spam']
 
-
 st.sidebar.subheader("Choose Classifier")
-
 
 classifier = st.sidebar.selectbox("Classification Algorithms",
                                      ("Support Vector Machine (thư viện)",
@@ -148,14 +133,6 @@ if classifier == 'Support Vector Machine (thư viện)':
     st.write("Accuracy ", accuracy.round(3))
     plot_metrics(metrics)
 
-
-
-
-
-
-
-
-#giao dien side bar dự đoán
 
 
 
