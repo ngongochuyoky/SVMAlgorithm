@@ -1,4 +1,4 @@
-# SVMAlgorithm
+# SVM Algorithm
 File SVM.ipynb: 
  - Data processing
  - Train, test models
